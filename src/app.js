@@ -10,10 +10,11 @@ require('dotenv').config()
 app.use(express.json());
 app.use(cors())
 
-
+db();
+routes(app);
 
 app.listen(port, "0.0.0.0", () => {
     console.log(`Application listening at http://localhost:${port}`);
-    db();
-    routes(app);
+    // db();
+    // routes(app);
 });
